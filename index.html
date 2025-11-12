@@ -1,138 +1,156 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shreyansh | Web Developer</title>
-  <meta name="description" content="Portfolio of Shreyansh — Web Developer and IoT Enthusiast. Built with HTML, CSS and JavaScript." />
-  <meta name="keywords" content="Shreyansh, Web Developer, Portfolio, HTML, CSS, JavaScript, IoT, SEO" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Tech store</title>
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
+  <div class="container">
+    <header class="header">
       <div class="brand">
-        <h1>Shreyansh</h1>
-        <p class="tag">Web Developer</p>
+        <div class="logo">TS</div>
+        <div>
+          <div class="title">The Tech store</div>
+          <div style="font-size:12px;color:var(--muted)">Where performance meets style</div>
+        </div>
       </div>
-      <nav>
-        <ul class="nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <nav class="nav">
+        <button class="btn">Home</button>
+        <button class="btn">Shop</button>
+        <button class="btn">Contact</button>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h2>Hi, I'm <span>Shreyansh</span></h2>
-          <p class="lead">Aspiring Web Developer & IoT Enthusiast skilled in HTML, CSS, JavaScript, Python, and C. I build responsive websites and optimise them for performance and SEO.</p>
-          <a class="btn" href="#contact">Contact Me</a>
+      <div class="hero-card">
+        <h1>Handpicked tech — glowing style.</h1>
+        <p>Curated selection of peripherals and devices with RGB personality and performance. Hover cards to preview and click Buy to add to cart.</p>
+        <div style="margin-top:18px;display:flex;gap:12px">
+          <button class="btn">Explore</button>
+          <button class="btn">Collections</button>
         </div>
-        <div class="hero-image">
-          <img src="assets/profile.jpg" alt="Shreyansh profile" />
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="hero-card" style="display:flex;align-items:center;gap:12px">
+          <img src="assets/images/mouse.png" alt="mouse" style="width:110px;height:110px;object-fit:contain;border-radius:12px">
+          <div>
+            <div style="font-weight:700">Pro RGB Mouse</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Sculpted for comfort, tuned for speed.</div>
+            <div style="margin-top:8px;font-weight:700;color:var(--accent1)">₹2,499</div>
+          </div>
+        </div>
+        <div class="hero-card" style="display:flex;align-items:center;gap:12px">
+          <img src="assets/images/keyboard.png" alt="keyboard" style="width:110px;height:110px;object-fit:contain;border-radius:12px">
+          <div>
+            <div style="font-weight:700">RGB Mechanical Keyboard</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Compact layout with full effects.</div>
+            <div style="margin-top:8px;font-weight:700;color:var(--accent2)">₹4,199</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section container">
-      <h2>About Me</h2>
-      <p>I'm an aspiring <strong>Web Developer</strong> and <strong>IoT Enthusiast</strong> passionate about building modern, efficient, and responsive websites. Skilled in <strong>WordPress development</strong>, <strong>SEO</strong>, and <strong>content writing</strong>. Strong understanding of <strong>microcontrollers</strong> and <strong>digital electronics</strong>.</p>
-      <div class="resume">
-        <h3>Experience</h3>
-        <ul>
-          <li><strong>Freelance Web Developer & SEO Specialist</strong>
-            <ul>
-              <li>Built responsive websites with HTML, CSS, JS, and WordPress.</li>
-              <li>Applied SEO strategies to improve traffic and visibility.</li>
-              <li>Managed client projects using GitHub and collaborative tools.</li>
-            </ul>
-          </li>
-          <li><strong>Content Writer (Internships & Freelance)</strong>
-            <ul>
-              <li>Kidney Care Centre – Developed healthcare blogs, optimised with SEO.</li>
-              <li>Universal Adventure – Wrote engaging travel articles.</li>
-              <li>Freelance Projects – Delivered keyword-rich blogs across multiple niches.</li>
-            </ul>
-          </li>
-        </ul>
+    
+<section style="margin-top:18px">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <h3 style="margin:0">Featured Products</h3>
+    <div style="display:flex;gap:8px;align-items:center">
+      <input id="search-input" placeholder="Search products or tag (eg: laptop)" style="background:transparent;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:10px;color:inherit;width:220px">
+      <div style="color:var(--muted);font-size:13px">Free shipping over ₹3,000</div>
+      <div style="margin-left:8px;display:flex;align-items:center;gap:6px">
+        <button class="btn" id="open-cart">Cart <span class="cart-count" style="margin-left:6px;background:rgba(255,255,255,0.02);padding:4px 8px;border-radius:8px">0</span></button>
+        <div class="auth-area"></div>
       </div>
-    </section>
-
-    <section id="skills" class="section container">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4>Web Development</h4>
-          <p>HTML, CSS, JavaScript, WordPress</p>
-        </div>
-        <div class="skill-card">
-          <h4>Programming</h4>
-          <p>Python, C, Java</p>
-        </div>
-        <div class="skill-card">
-          <h4>Electronics</h4>
-          <p>Microcontrollers, Digital Electronics, IoT Basics</p>
-        </div>
-        <div class="skill-card">
-          <h4>SEO & Content</h4>
-          <p>Blogging, Keyword Research, Copywriting</p>
-        </div>
-        <div class="skill-card">
-          <h4>Tools</h4>
-          <p>GitHub, Canva, DaVinci Resolve, Photoshop</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section container">
-      <h2>Projects & Experience</h2>
-      <div class="project-list">
-        <article class="project">
-          <h3>Freelance Web Development</h3>
-          <p>Built responsive websites using HTML, CSS, JS and WordPress. Applied SEO strategies to boost traffic and managed projects on GitHub.</p>
-        </article>
-        <article class="project">
-          <h3>Content Writing</h3>
-          <p>Developed SEO-optimized blogs for healthcare and travel industries (Kidney Care Centre, Universal Adventure) and other freelance projects.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="section container">
-      <h2>Education</h2>
-      <p><strong>B.Tech in Electronics & Communication Engineering</strong><br>Chaudhary Devi Lal State Institute of Engg. & Tech., Haryana (Ongoing)</p>
-    </section>
-
-    <section id="contact" class="section container contact-section">
-      <h2>Contact Me</h2>
-      <form id="contact-form" class="contact-form">
-        <label for="from_name">Name</label>
-        <input type="text" id="from_name" name="from_name" required />
-
-        <label for="from_email">Email</label>
-        <input type="email" id="from_email" name="from_email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Shreyansh | Web Developer — Built with HTML, CSS & JS</p>
     </div>
-  </footer>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="products" style="margin-top:12px"></div>
+</section>
+
+<!-- Cart drawer/panel -->
+<div class="cart-drawer" style="position:fixed;right:18px;top:80px;width:360px;background:var(--card);border-radius:12px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,0.6);display:none;z-index:60">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-weight:700">Your Cart</div>
+    <div><button class="btn" id="close-cart">Close</button></div>
+  </div>
+  <div class="cart-panel" style="margin-top:12px;max-height:420px;overflow:auto"></div>
+</div>
+
+<!-- Simple modal for details -->
+<div class="modal" style="position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;z-index:80">
+  <div class="backdrop" style="position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.6)"></div>
+  <div style="position:relative;z-index:90;background:var(--card);padding:18px;border-radius:12px;min-width:320px;max-width:860px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="modal-title" style="font-weight:800"></div>
+      <div><button class="btn close">Close</button></div>
+    </div>
+    <div class="modal-body" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<!-- Checkout panel -->
+<div class="checkout-panel" style="position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;z-index:100">
+  <div class="backdrop" style="position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.6)"></div>
+  <div style="position:relative;z-index:110;background:var(--card);padding:18px;border-radius:12px;min-width:320px;max-width:540px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-weight:800">Checkout</div>
+      <div><button class="btn" onclick="document.querySelector('.checkout-panel').classList.remove('open')">Close</button></div>
+    </div>
+    <div class="checkout-form" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<!-- Login modal -->
+<div class="login-modal" style="position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;z-index:120">
+  <div class="backdrop" style="position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.6)"></div>
+  <div style="position:relative;z-index:130;background:var(--card);padding:18px;border-radius:12px;min-width:320px;max-width:420px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-weight:800">Login / Signup</div>
+      <div><button class="btn close">Close</button></div>
+    </div>
+    <div style="margin-top:10px">
+      <form id="login-form" style="display:flex;flex-direction:column;gap:8px">
+        <input id="login-user" placeholder="username" required style="padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03)">
+        <input id="login-pass" placeholder="password" type="password" required style="padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03)">
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <div style="height:1px;background:rgba(255,255,255,0.02);margin:8px 0"></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <input id="signup-user" placeholder="new username" style="padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03)">
+        <input id="signup-pass" placeholder="new password" type="password" style="padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03)">
+        <button class="btn" id="signup-btn">Signup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Orders area -->
+<section style="margin-top:18px">
+  <h3 style="margin:0">Order History</h3>
+  <div class="orders-area" style="margin-top:12px"></div>
+</section>
+
+<!-- small modal styles/flash -->
+<style>
+  .modal.open{display:flex}
+  .login-modal.open{display:flex}
+  .cart-drawer.open{display:block}
+  .checkout-panel.open{display:flex}
+  .flash{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;background:linear-gradient(90deg,var(--accent2),var(--accent1));padding:10px 16px;border-radius:10px;color:#031018;font-weight:700;opacity:0;transition:300ms}
+  .btn.small{padding:6px 8px;border-radius:8px}
+</style>
+
+
+    <footer class="footer">
+      <div>© <strong>The Tech store</strong> — Crafted with care</div>
+      <div style="font-size:13px">Need help? <span style="color:var(--accent1)">support@techstore.example</span></div>
+    </footer>
+
+  </div>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
